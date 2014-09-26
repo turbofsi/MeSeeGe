@@ -19,6 +19,7 @@
 		1811CDA019D37D1300251984 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811CD9F19D37D1300251984 /* QuartzCore.framework */; };
 		1811CDA219D37D3700251984 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811CDA119D37D3700251984 /* UIKit.framework */; };
 		1811CDA419D37D4300251984 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811CDA319D37D4300251984 /* CoreGraphics.framework */; };
+		1873EF1619D5C6D100815AC2 /* CFMagicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1811CD9F19D37D1300251984 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1811CDA119D37D3700251984 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1811CDA319D37D4300251984 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1873EF1419D5C6D100815AC2 /* CFMagicEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMagicEvents.h; sourceTree = "<group>"; };
+		1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMagicEvents.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		1811CD7319D37C0B00251984 /* MyShakeDemo0924 */ = {
 			isa = PBXGroup;
 			children = (
+				1873EF1319D5C6D100815AC2 /* CFMagicEvents */,
 				1811CD7819D37C0B00251984 /* AppDelegate.h */,
 				1811CD7919D37C0B00251984 /* AppDelegate.m */,
 				1811CD7B19D37C0B00251984 /* ViewController.h */,
@@ -146,6 +150,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1873EF1319D5C6D100815AC2 /* CFMagicEvents */ = {
+			isa = PBXGroup;
+			children = (
+				1873EF1419D5C6D100815AC2 /* CFMagicEvents.h */,
+				1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */,
+			);
+			name = CFMagicEvents;
+			path = "../../../../Desktop/GEEK/iOS Project/DownLoadReference/CFMagicEvents";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1811CD7D19D37C0B00251984 /* ViewController.m in Sources */,
+				1873EF1619D5C6D100815AC2 /* CFMagicEvents.m in Sources */,
 				1811CD7A19D37C0B00251984 /* AppDelegate.m in Sources */,
 				1811CD7719D37C0B00251984 /* main.m in Sources */,
 				1811CD9C19D37C2E00251984 /* CamaraView.m in Sources */,
@@ -444,6 +459,7 @@
 				1811CD9619D37C0B00251984 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1811CD9719D37C0B00251984 /* Build configuration list for PBXNativeTarget "MyShakeDemo0924Tests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +468,7 @@
 				1811CD9919D37C0B00251984 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

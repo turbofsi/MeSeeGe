@@ -8,12 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "CamaraView.h"
+#import "CFMagicEvents.h"
 
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet CamaraView *camaraView;
 @property (strong, nonatomic) IBOutlet UITextView *alphaTextView;
+@property (strong, nonatomic) CFMagicEvents *cfMagicEvents;
+
+
 - (IBAction)singleTapAction:(UITapGestureRecognizer *)sender;
+
 
 
 @end

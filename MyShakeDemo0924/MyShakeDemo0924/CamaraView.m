@@ -7,18 +7,12 @@
 //
 
 #import "CamaraView.h"
+#import "CFMagicEvents.h"
 
 @implementation CamaraView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
-
+#pragma mark - Code for the live backgound section
 -(void)setDefauts {
     [self setBackgroundColor:[UIColor darkGrayColor]];
 //    self.layer.cornerRadius = 5;
@@ -26,6 +20,7 @@
     self.frame = CGRectMake(0, 0, 320, 568);
     self.cameraType = AVCaptureDevicePositionBack;
     self.draggable = NO;
+    
 }
 
 -(void)startFaceCam{
@@ -54,9 +49,14 @@
                 [self.layer addSublayer:_captureVideoPreviewLayer];
                 
                 [_session startRunning];
+                
             } else {
                 NSLog(@"Couldn't add input");
-            }
+//                _captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_session];
+//                [self.layer addSublayer:_captureVideoPreviewLayer];
+
+                [_session startRunning];
+                    }
         }
     } else {
         NSLog(@"Camera not available");
@@ -84,15 +84,18 @@
     
     return captureDevice;
 }
+
 #pragma mark - Motion Detection
+
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     if ( event.subtype == UIEventSubtypeMotionShake )
     {
         // Put in code here to handle shake
         NSLog(@"Your iPhone is Shaking!!!");
-        [self startFaceCam];
-        
+//        [self.captureVideoPreviewLayer removeFromSuperlayer];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"shakingEventActivated" object:nil];
+//
     }
     
     if ( [super respondsToSelector:@selector(motionEnded:withEvent:)] )

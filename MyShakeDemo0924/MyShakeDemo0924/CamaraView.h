@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "CFMagicEvents.h"
 
 @interface CamaraView : UIView
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, assign) BOOL draggable;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
+@property (nonatomic, strong) CFMagicEvents *cfmagicEvents;
 
 -(void)startFaceCam;
 -(void)setDefauts;
