@@ -33,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1811CD7119D37C0B00251984 /* MyShakeDemo0924.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyShakeDemo0924.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1811CD7119D37C0B00251984 /* MeSeeGe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeSeeGe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1811CD7519D37C0B00251984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1811CD7619D37C0B00251984 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1811CD7819D37C0B00251984 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		1811CD7219D37C0B00251984 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1811CD7119D37C0B00251984 /* MyShakeDemo0924.app */,
+				1811CD7119D37C0B00251984 /* MeSeeGe.app */,
 				1811CD8A19D37C0B00251984 /* MyShakeDemo0924Tests.xctest */,
 			);
 			name = Products;
@@ -179,7 +179,7 @@
 			);
 			name = MyShakeDemo0924;
 			productName = MyShakeDemo0924;
-			productReference = 1811CD7119D37C0B00251984 /* MyShakeDemo0924.app */;
+			productReference = 1811CD7119D37C0B00251984 /* MeSeeGe.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1811CD8919D37C0B00251984 /* MyShakeDemo0924Tests */ = {
@@ -392,7 +392,7 @@
 				INFOPLIST_FILE = MyShakeDemo0924/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MeSeeGe;
 			};
 			name = Debug;
 		};
@@ -404,7 +404,7 @@
 				INFOPLIST_FILE = MyShakeDemo0924/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MeSeeGe;
 			};
 			name = Release;
 		};
