@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1811CD7019D37C0B00251984"
                BuildableName = "MyShakeDemo0924.app"
                BlueprintName = "MyShakeDemo0924"
-               ReferencedContainer = "container:MyShakeDemo0924.xcodeproj">
+               ReferencedContainer = "container:MeSeeGe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "1811CD8919D37C0B00251984"
                BuildableName = "MyShakeDemo0924Tests.xctest"
                BlueprintName = "MyShakeDemo0924Tests"
-               ReferencedContainer = "container:MyShakeDemo0924.xcodeproj">
+               ReferencedContainer = "container:MeSeeGe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "1811CD8919D37C0B00251984"
                BuildableName = "MyShakeDemo0924Tests.xctest"
                BlueprintName = "MyShakeDemo0924Tests"
-               ReferencedContainer = "container:MyShakeDemo0924.xcodeproj">
+               ReferencedContainer = "container:MeSeeGe.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "1811CD7019D37C0B00251984"
             BuildableName = "MyShakeDemo0924.app"
             BlueprintName = "MyShakeDemo0924"
-            ReferencedContainer = "container:MyShakeDemo0924.xcodeproj">
+            ReferencedContainer = "container:MeSeeGe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "1811CD7019D37C0B00251984"
             BuildableName = "MyShakeDemo0924.app"
             BlueprintName = "MyShakeDemo0924"
-            ReferencedContainer = "container:MyShakeDemo0924.xcodeproj">
+            ReferencedContainer = "container:MeSeeGe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +96,7 @@
             BlueprintIdentifier = "1811CD7019D37C0B00251984"
             BuildableName = "MyShakeDemo0924.app"
             BlueprintName = "MyShakeDemo0924"
-            ReferencedContainer = "container:MyShakeDemo0924.xcodeproj">
+            ReferencedContainer = "container:MeSeeGe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

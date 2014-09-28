@@ -19,26 +19,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//#pragma mark - Set the magic events
-//    _cfMagicEvents = [[CFMagicEvents alloc] init];
-//
-#pragma mark - Magic events Notification Define
+//Set up the magic events
+
     _cfMagicEvents = [[CFMagicEvents alloc] init];
+    
+//Set the notification.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveOnMagicEventDetected:) name:@"onMagicEventDetected" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveOnMagicEventNotDetected:) name:@"onMagicEventNotDetected" object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shakingAction:) name:@"shakingEventActivated" object:nil];
-
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shakingAction:) name:@"shakingEventActivated" object:nil];
+    
+//Set the default camaraView
+    
     [_camaraView setDefauts];
-//    [_camaraView startFaceCam];
+    
+//Add the alphaView to the mainView, ***: Not the camaraView
     
     [self.view addSubview:_alphaTextView];
     [_camaraView becomeFirstResponder];
     
     
 }
-
+#pragma mark - Notification Actions for magic events(detected & not detected)
 - (void)receiveOnMagicEventDetected:(NSNotification *) notification
 {
 
@@ -53,10 +57,14 @@
     NSLog(@"receiveOnMagicEventNotDetected");
 }
 
+#pragma mark - activate when shaking event is detected
 - (void)shakingAction: (NSNotification *) notification
 {
 //    [_camaraView.captureVideoPreviewLayer removeFromSuperlayer];
+    
     [_camaraView.session stopRunning];
+    //The Session will stop running, when recieve magic event, it will turn to [_camaraView startFaceCam] and show Live Background.
+    
     [_cfMagicEvents startCapture];
 }
 
