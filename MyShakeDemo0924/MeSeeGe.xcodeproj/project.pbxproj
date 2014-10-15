@@ -19,6 +19,8 @@
 		1811CDA019D37D1300251984 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811CD9F19D37D1300251984 /* QuartzCore.framework */; };
 		1811CDA219D37D3700251984 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811CDA119D37D3700251984 /* UIKit.framework */; };
 		1811CDA419D37D4300251984 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811CDA319D37D4300251984 /* CoreGraphics.framework */; };
+		1850E80E19EF32A800DC51E4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1850E80D19EF32A800DC51E4 /* MapViewController.m */; };
+		1850E81019EF339200DC51E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1850E80F19EF339200DC51E4 /* MapKit.framework */; };
 		1873EF1619D5C6D100815AC2 /* CFMagicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,9 @@
 		1811CD9F19D37D1300251984 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1811CDA119D37D3700251984 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1811CDA319D37D4300251984 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1850E80C19EF32A800DC51E4 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		1850E80D19EF32A800DC51E4 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		1850E80F19EF339200DC51E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1873EF1419D5C6D100815AC2 /* CFMagicEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMagicEvents.h; sourceTree = "<group>"; };
 		1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMagicEvents.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1850E81019EF339200DC51E4 /* MapKit.framework in Frameworks */,
 				1811CDA419D37D4300251984 /* CoreGraphics.framework in Frameworks */,
 				1811CDA219D37D3700251984 /* UIKit.framework in Frameworks */,
 				1811CDA019D37D1300251984 /* QuartzCore.framework in Frameworks */,
@@ -81,6 +87,7 @@
 		1811CD6819D37C0B00251984 = {
 			isa = PBXGroup;
 			children = (
+				1850E80F19EF339200DC51E4 /* MapKit.framework */,
 				1811CD7319D37C0B00251984 /* MyShakeDemo0924 */,
 				1811CD8D19D37C0B00251984 /* MyShakeDemo0924Tests */,
 				1811CD7219D37C0B00251984 /* Products */,
@@ -104,6 +111,8 @@
 				1811CD7919D37C0B00251984 /* AppDelegate.m */,
 				1811CD7B19D37C0B00251984 /* ViewController.h */,
 				1811CD7C19D37C0B00251984 /* ViewController.m */,
+				1850E80C19EF32A800DC51E4 /* MapViewController.h */,
+				1850E80D19EF32A800DC51E4 /* MapViewController.m */,
 				1811CD9A19D37C2E00251984 /* CamaraView.h */,
 				1811CD9B19D37C2E00251984 /* CamaraView.m */,
 				1811CD7E19D37C0B00251984 /* Main.storyboard */,
@@ -265,6 +274,7 @@
 				1811CD7D19D37C0B00251984 /* ViewController.m in Sources */,
 				1873EF1619D5C6D100815AC2 /* CFMagicEvents.m in Sources */,
 				1811CD7A19D37C0B00251984 /* AppDelegate.m in Sources */,
+				1850E80E19EF32A800DC51E4 /* MapViewController.m in Sources */,
 				1811CD7719D37C0B00251984 /* main.m in Sources */,
 				1811CD9C19D37C2E00251984 /* CamaraView.m in Sources */,
 			);

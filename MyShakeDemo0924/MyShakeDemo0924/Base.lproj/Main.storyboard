@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gK1-GJ-UL2">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -35,10 +36,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="MeSeeGe" id="K4E-i2-apl">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="vbS-UE-JZH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="vbS-UE-JZH">
                             <color key="tintColor" red="1" green="0.1464227924" blue="0.33999680970000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="0Bf-fC-cfb" kind="show" id="A8P-MW-fBd"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Un-0X-vZV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="9Un-0X-vZV">
                             <color key="tintColor" red="1" green="0.1464227924" blue="0.33999680970000001" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -55,7 +59,42 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="951" y="136"/>
+            <point key="canvasLocation" x="1763" y="136"/>
+        </scene>
+        <!--Choose Destination-->
+        <scene sceneID="2az-Mz-Ylb">
+            <objects>
+                <viewController id="0Bf-fC-cfb" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ulS-ov-PsJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="H0d-h0-Uge"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="43M-ox-oSW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-Cc-1U3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Choose Destination" id="QX3-Fp-kB5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="emE-A1-AXd">
+                            <connections>
+                                <segue destination="vXZ-lx-hvc" kind="show" id="89e-VC-Jll"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kKC-4t-ksj"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myMap" destination="eyq-Cc-1U3" id="XDG-Qw-4ad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QR-yY-6Tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xea-GZ-QJP">
@@ -74,7 +113,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXP-qa-qHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="781"/>
+            <point key="canvasLocation" x="1278" y="129"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="89e-VC-Jll"/>
+    </inferredMetricsTieBreakers>
 </document>

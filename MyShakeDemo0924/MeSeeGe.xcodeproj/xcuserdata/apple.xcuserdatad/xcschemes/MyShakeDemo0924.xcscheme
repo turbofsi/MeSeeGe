@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1811CD7019D37C0B00251984"
-               BuildableName = "MyShakeDemo0924.app"
+               BuildableName = "MeSeeGe.app"
                BlueprintName = "MyShakeDemo0924"
                ReferencedContainer = "container:MeSeeGe.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1811CD7019D37C0B00251984"
-            BuildableName = "MyShakeDemo0924.app"
+            BuildableName = "MeSeeGe.app"
             BlueprintName = "MyShakeDemo0924"
             ReferencedContainer = "container:MeSeeGe.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1811CD7019D37C0B00251984"
-            BuildableName = "MyShakeDemo0924.app"
+            BuildableName = "MeSeeGe.app"
             BlueprintName = "MyShakeDemo0924"
             ReferencedContainer = "container:MeSeeGe.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1811CD7019D37C0B00251984"
-            BuildableName = "MyShakeDemo0924.app"
+            BuildableName = "MeSeeGe.app"
             BlueprintName = "MyShakeDemo0924"
             ReferencedContainer = "container:MeSeeGe.xcodeproj">
          </BuildableReference>
