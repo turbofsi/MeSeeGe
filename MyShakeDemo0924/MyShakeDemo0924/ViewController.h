@@ -19,7 +19,7 @@
 
 - (IBAction)singleTapAction:(UITapGestureRecognizer *)sender;
 
-
+- (IBAction)unwindToMainView:(UIStoryboardSegue *)segue;
 
 @end
 

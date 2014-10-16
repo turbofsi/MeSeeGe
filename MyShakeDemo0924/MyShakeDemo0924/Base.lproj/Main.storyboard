@@ -39,7 +39,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="vbS-UE-JZH">
                             <color key="tintColor" red="1" green="0.1464227924" blue="0.33999680970000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="0Bf-fC-cfb" kind="show" id="A8P-MW-fBd"/>
+                                <segue destination="e5C-kX-3vx" kind="presentation" modalTransitionStyle="coverVertical" id="A8P-MW-fBd"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="reply" id="9Un-0X-vZV">
@@ -82,10 +82,14 @@
                     <navigationItem key="navigationItem" title="Choose Destination" id="QX3-Fp-kB5">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="emE-A1-AXd">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="show" id="89e-VC-Jll"/>
+                                <segue destination="mpY-oO-haf" kind="unwind" unwindAction="unwindToMainView:" id="bEd-2n-ntJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kKC-4t-ksj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kKC-4t-ksj">
+                            <connections>
+                                <segue destination="mpY-oO-haf" kind="unwind" unwindAction="unwindToMainView:" id="rBb-nC-ImM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -93,8 +97,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4QR-yY-6Tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mpY-oO-haf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="821"/>
+            <point key="canvasLocation" x="2295" y="821"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xea-GZ-QJP">
@@ -115,8 +120,23 @@
             </objects>
             <point key="canvasLocation" x="1278" y="129"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y7v-Yw-dPH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e5C-kX-3vx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0S9-0f-4Nf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Bf-fC-cfb" kind="relationship" relationship="rootViewController" id="FZv-n7-t1Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7n-8H-yWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="821"/>
+        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="89e-VC-Jll"/>
-    </inferredMetricsTieBreakers>
 </document>

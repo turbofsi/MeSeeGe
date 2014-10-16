@@ -78,4 +78,9 @@
     [_camaraView becomeFirstResponder];
 }
 
+- (IBAction)unwindToMainView:(UIStoryboardSegue *)segue
+{
+    
+}
+
 @end
