@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "WYanotation.h"
 
 @interface MapViewController : UIViewController<MKMapViewDelegate>
 
+@property (strong, nonatomic) MKPinAnnotationView *annotationView;
+@property (strong, nonatomic) WYanotation *lastNotation;
+
+@property CLLocationCoordinate2D coordinate;
 
 @property (strong, nonatomic) IBOutlet MKMapView *myMap;
+
+- (IBAction)longPressAction:(UILongPressGestureRecognizer *)sender;
+
 
 
 

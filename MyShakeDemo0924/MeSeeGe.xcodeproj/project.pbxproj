@@ -22,6 +22,10 @@
 		1850E80E19EF32A800DC51E4 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1850E80D19EF32A800DC51E4 /* MapViewController.m */; };
 		1850E81019EF339200DC51E4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1850E80F19EF339200DC51E4 /* MapKit.framework */; };
 		1873EF1619D5C6D100815AC2 /* CFMagicEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */; };
+		18F9B71E19F4304100F1EACD /* WYanotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9B71D19F4304100F1EACD /* WYanotation.m */; };
+		18F9B72219F450EE00F1EACD /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18F9B71F19F450EE00F1EACD /* arrow.png */; };
+		18F9B72319F450EE00F1EACD /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9B72119F450EE00F1EACD /* GeoPointCompass.m */; };
+		18F9B72619F4537100F1EACD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F9B72519F4537100F1EACD /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,12 @@
 		1850E80F19EF339200DC51E4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1873EF1419D5C6D100815AC2 /* CFMagicEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMagicEvents.h; sourceTree = "<group>"; };
 		1873EF1519D5C6D100815AC2 /* CFMagicEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMagicEvents.m; sourceTree = "<group>"; };
+		18F9B71C19F4304100F1EACD /* WYanotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYanotation.h; path = ../../../mapDemo/1014mapDemo/1014mapDemo/WYanotation.h; sourceTree = "<group>"; };
+		18F9B71D19F4304100F1EACD /* WYanotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYanotation.m; path = ../../../mapDemo/1014mapDemo/1014mapDemo/WYanotation.m; sourceTree = "<group>"; };
+		18F9B71F19F450EE00F1EACD /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = "../../../../Downloads/GeoPointCompass-master/GeoPointCompass/arrow.png"; sourceTree = "<group>"; };
+		18F9B72019F450EE00F1EACD /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoPointCompass.h; path = "../../../../Downloads/GeoPointCompass-master/GeoPointCompass/GeoPointCompass.h"; sourceTree = "<group>"; };
+		18F9B72119F450EE00F1EACD /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoPointCompass.m; path = "../../../../Downloads/GeoPointCompass-master/GeoPointCompass/GeoPointCompass.m"; sourceTree = "<group>"; };
+		18F9B72519F4537100F1EACD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F9B72619F4537100F1EACD /* CoreLocation.framework in Frameworks */,
 				1850E81019EF339200DC51E4 /* MapKit.framework in Frameworks */,
 				1811CDA419D37D4300251984 /* CoreGraphics.framework in Frameworks */,
 				1811CDA219D37D3700251984 /* UIKit.framework in Frameworks */,
@@ -87,6 +98,7 @@
 		1811CD6819D37C0B00251984 = {
 			isa = PBXGroup;
 			children = (
+				18F9B72519F4537100F1EACD /* CoreLocation.framework */,
 				1850E80F19EF339200DC51E4 /* MapKit.framework */,
 				1811CD7319D37C0B00251984 /* MyShakeDemo0924 */,
 				1811CD8D19D37C0B00251984 /* MyShakeDemo0924Tests */,
@@ -106,16 +118,17 @@
 		1811CD7319D37C0B00251984 /* MyShakeDemo0924 */ = {
 			isa = PBXGroup;
 			children = (
+				18F9B72419F450F900F1EACD /* CompassView */,
+				18F9B71B19F42FFC00F1EACD /* mapView */,
 				1873EF1319D5C6D100815AC2 /* CFMagicEvents */,
 				1811CD7819D37C0B00251984 /* AppDelegate.h */,
 				1811CD7919D37C0B00251984 /* AppDelegate.m */,
 				1811CD7B19D37C0B00251984 /* ViewController.h */,
 				1811CD7C19D37C0B00251984 /* ViewController.m */,
-				1850E80C19EF32A800DC51E4 /* MapViewController.h */,
-				1850E80D19EF32A800DC51E4 /* MapViewController.m */,
 				1811CD9A19D37C2E00251984 /* CamaraView.h */,
 				1811CD9B19D37C2E00251984 /* CamaraView.m */,
 				1811CD7E19D37C0B00251984 /* Main.storyboard */,
+				18F9B71F19F450EE00F1EACD /* arrow.png */,
 				1811CD8119D37C0B00251984 /* Images.xcassets */,
 				1811CD8319D37C0B00251984 /* LaunchScreen.xib */,
 				1811CD7419D37C0B00251984 /* Supporting Files */,
@@ -169,6 +182,26 @@
 			);
 			name = CFMagicEvents;
 			path = "../../../../Desktop/GEEK/iOS Project/DownLoadReference/CFMagicEvents";
+			sourceTree = "<group>";
+		};
+		18F9B71B19F42FFC00F1EACD /* mapView */ = {
+			isa = PBXGroup;
+			children = (
+				18F9B71C19F4304100F1EACD /* WYanotation.h */,
+				18F9B71D19F4304100F1EACD /* WYanotation.m */,
+				1850E80C19EF32A800DC51E4 /* MapViewController.h */,
+				1850E80D19EF32A800DC51E4 /* MapViewController.m */,
+			);
+			name = mapView;
+			sourceTree = "<group>";
+		};
+		18F9B72419F450F900F1EACD /* CompassView */ = {
+			isa = PBXGroup;
+			children = (
+				18F9B72019F450EE00F1EACD /* GeoPointCompass.h */,
+				18F9B72119F450EE00F1EACD /* GeoPointCompass.m */,
+			);
+			name = CompassView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +287,7 @@
 				1811CD8019D37C0B00251984 /* Main.storyboard in Resources */,
 				1811CD8519D37C0B00251984 /* LaunchScreen.xib in Resources */,
 				1811CD8219D37C0B00251984 /* Images.xcassets in Resources */,
+				18F9B72219F450EE00F1EACD /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F9B71E19F4304100F1EACD /* WYanotation.m in Sources */,
 				1811CD7D19D37C0B00251984 /* ViewController.m in Sources */,
 				1873EF1619D5C6D100815AC2 /* CFMagicEvents.m in Sources */,
 				1811CD7A19D37C0B00251984 /* AppDelegate.m in Sources */,
 				1850E80E19EF32A800DC51E4 /* MapViewController.m in Sources */,
 				1811CD7719D37C0B00251984 /* main.m in Sources */,
 				1811CD9C19D37C2E00251984 /* CamaraView.m in Sources */,
+				18F9B72319F450EE00F1EACD /* GeoPointCompass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
