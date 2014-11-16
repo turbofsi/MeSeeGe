@@ -15,11 +15,13 @@
 @property (strong, nonatomic) IBOutlet CamaraView *camaraView;
 @property (strong, nonatomic) IBOutlet UITextView *alphaTextView;
 @property (strong, nonatomic) CFMagicEvents *cfMagicEvents;
+@property (strong, nonatomic) AVSpeechSynthesizer *av;
 
 
 - (IBAction)singleTapAction:(UITapGestureRecognizer *)sender;
 
 - (IBAction)unwindToMainView:(UIStoryboardSegue *)segue;
+- (IBAction)unwindToMainView2:(UIStoryboardSegue *)segue;
 
 @end
 

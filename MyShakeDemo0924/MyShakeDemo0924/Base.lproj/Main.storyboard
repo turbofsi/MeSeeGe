@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gK1-GJ-UL2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gK1-GJ-UL2">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--MeSeeGe-->
@@ -25,7 +25,7 @@
                                     <outletCollection property="gestureRecognizers" destination="XZC-Uj-3Ft" appends="YES" id="Q84-9F-Hc3"/>
                                 </connections>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" text="Hello World" translatesAutoresizingMaskIntoConstraints="NO" id="zda-Hn-szp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="zda-Hn-szp">
                                 <rect key="frame" x="40" y="80" width="240" height="210"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,11 +39,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="vbS-UE-JZH">
                             <color key="tintColor" red="1" green="0.1464227924" blue="0.33999680970000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="e5C-kX-3vx" kind="presentation" modalTransitionStyle="coverVertical" id="A8P-MW-fBd"/>
+                                <segue destination="e5C-kX-3vx" kind="presentation" identifier="Nav" modalTransitionStyle="coverVertical" id="A8P-MW-fBd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="reply" id="9Un-0X-vZV">
+                        <barButtonItem key="rightBarButtonItem" title="S Mode" id="9Un-0X-vZV">
                             <color key="tintColor" red="1" green="0.1464227924" blue="0.33999680970000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="PqY-bm-7Fh" kind="presentation" id="ekA-K9-PYB"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -60,6 +63,53 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1763" y="136"/>
+        </scene>
+        <!--Speech View Controller-->
+        <scene sceneID="wrg-UX-5WK">
+            <objects>
+                <viewController id="PqY-bm-7Fh" customClass="SpeechViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EqQ-g6-ahe"/>
+                        <viewControllerLayoutGuide type="bottom" id="xQ1-rm-662"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q6I-Iv-Wyq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEl-On-oPk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vCr-dW-e8j" appends="YES" id="QZM-RP-ygL"/>
+                                    <outletCollection property="gestureRecognizers" destination="rRT-rG-X39" appends="YES" id="ueD-fH-HXF"/>
+                                    <outletCollection property="gestureRecognizers" destination="7sV-Oa-Fld" appends="YES" id="UsX-3e-wr9"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbj-na-l3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zIc-MX-XOc" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" numberOfTouchesRequired="2" id="vCr-dW-e8j">
+                    <connections>
+                        <segue destination="zIc-MX-XOc" kind="unwind" unwindAction="unwindToMainView2:" id="DvU-kZ-H8K"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="rRT-rG-X39">
+                    <connections>
+                        <action selector="singleTap:" destination="PqY-bm-7Fh" id="rsE-Bn-3ia"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <rotationGestureRecognizer id="7sV-Oa-Fld">
+                    <connections>
+                        <action selector="rotateAction:" destination="PqY-bm-7Fh" id="r1g-gg-IF9"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2186" y="136"/>
         </scene>
         <!--Choose Destination-->
         <scene sceneID="2az-Mz-Ylb">

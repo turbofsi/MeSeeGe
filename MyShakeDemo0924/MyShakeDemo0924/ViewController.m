@@ -12,6 +12,7 @@
 #import "GeoPointCompass.h"
 #import "MapViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 
@@ -36,6 +37,8 @@ GeoPointCompass *geoCompassView;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shakingAction:) name:@"shakingEventActivated" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseOrStart) name:@"pauseOrStartAction" object:nil];
+    
 //Set the default camaraView
     
     [_camaraView setDefauts];
@@ -51,11 +54,10 @@ GeoPointCompass *geoCompassView;
     arrowImageView.image = [UIImage imageNamed:@"arrow.png"];
     [self.view addSubview:arrowImageView];
     
-//    geoCompassView = [[GeoPointCompass alloc] init];
-//    geoCompassView.arrowImageView = arrowImageView;
-    
-//    geoCompassView.latitudeOfTargetedPoint = 48.858093;
-//    geoCompassView.longitudeOfTargetedPoint = 2.294694;
+    NSString *speechString = _alphaTextView.text;
+    _av = [[AVSpeechSynthesizer alloc] init];
+    AVSpeechUtterance *targetText = [[AVSpeechUtterance alloc] initWithString:speechString];
+    targetText.rate = 0.2;
     
 }
 #pragma mark - Notification Actions for magic events(detected & not detected)
@@ -96,16 +98,42 @@ GeoPointCompass *geoCompassView;
 
 - (IBAction)unwindToMainView:(UIStoryboardSegue *)segue
 {
-    [_camaraView becomeFirstResponder];
-    MapViewController *source = [segue sourceViewController];
-    CLLocationCoordinate2D coodinate = source.coordinate;
-    if (coodinate.latitude != 0) {
-        geoCompassView = [[GeoPointCompass alloc] init];
-        UIImageView *arrowImageView = (UIImageView *)[self.view viewWithTag:101];
-        geoCompassView.arrowImageView = arrowImageView;
-        geoCompassView.latitudeOfTargetedPoint = coodinate.latitude;
-        geoCompassView.longitudeOfTargetedPoint = coodinate.longitude;
+    
+        [_camaraView becomeFirstResponder];
+        MapViewController *source = [segue sourceViewController];
+        CLLocationCoordinate2D coodinate = source.coordinate;
+        if (coodinate.latitude != 0)
+        {
+            geoCompassView = [[GeoPointCompass alloc] init];
+            UIImageView *arrowImageView = (UIImageView *)[self.view viewWithTag:101];
+            geoCompassView.arrowImageView = arrowImageView;
+            geoCompassView.latitudeOfTargetedPoint = coodinate.latitude;
+            geoCompassView.longitudeOfTargetedPoint = coodinate.longitude;
+        }
+    
+}
+
+- (IBAction)unwindToMainView2:(UIStoryboardSegue *)segue{
+    [_av stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    sp = 0;
+}
+
+int sp = 0;
+- (void)pauseOrStart{
+    NSString *speechString = _alphaTextView.text;
+    AVSpeechUtterance *targetText = [[AVSpeechUtterance alloc] initWithString:speechString];
+    targetText.rate = 0.2;
+
+    if (sp == 0) {
+        [_av speakUtterance:targetText];
     }
+    if (sp % 2 != 0) {
+        [_av continueSpeaking];
+    }
+    else{
+        [_av pauseSpeakingAtBoundary:AVSpeechBoundaryWord];
+    }
+    sp++;
 }
 
 @end
